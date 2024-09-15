@@ -4,6 +4,8 @@ import "./styles/main.scss";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
+import Downloads from "./components/Downloads";
+import FAQ from "./components/FAQ";
 
 function App() {
 	return (
@@ -11,6 +13,8 @@ function App() {
 			<Header />
 			<Hero />
 			<Features />
+			<Downloads />
+			<FAQ />
 		</div>
 	);
 }

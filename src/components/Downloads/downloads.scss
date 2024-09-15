@@ -1,0 +1,72 @@
+@import "../../styles//main.scss";
+
+#downloads {
+	.cards {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		margin-top: 64px;
+
+		.card {
+			width: 280px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			padding: 40px 20px 20px;
+			border-radius: 4px;
+			position: relative;
+
+			.browser-image {
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 36px;
+			}
+
+			.browser-name {
+				margin-bottom: 8px;
+			}
+
+			.min-version {
+				font-size: 15px;
+				font-weight: $fw-regular;
+				color: $grayish-blue;
+				margin-bottom: 20px;
+			}
+
+			.dots {
+				position: absolute;
+				left: 0;
+				top: 75%;
+			}
+
+			button {
+				margin-top: 48px;
+			}
+		}
+	}
+}
+
+@media (min-width: 376px) {
+	#downloads {
+		.description {
+			width: 44ch;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.cards {
+			flex-direction: row;
+			justify-content: center;
+			gap: 40px;
+
+			.card {
+				margin: unset;
+
+				.dots {
+					top: 72%;
+				}
+			}
+		}
+	}
+}
