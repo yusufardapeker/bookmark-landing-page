@@ -3,7 +3,7 @@ $soft-blue: hsl(231, 69%, 60%);
 $soft-red: hsl(0, 94%, 66%);
 $grayish-blue: hsl(229, 8%, 60%);
 $very-dark-blue: hsl(229, 31%, 21%);
-$very-dark-blue-600: hsla(229, 31%, 21%, 0.6);
+$very-dark-blue-900: hsla(229, 31%, 21%, 0.96);
 $white: hsl(0, 0%, 100%);
 $white-800: hsla(0, 0%, 100%, 0.8);
 $white-200: hsla(0, 0%, 100%, 0.2);
@@ -15,3 +15,68 @@ $fw-semi-bold: 500;
 
 // Border Radius
 $border-radius-s: 4px;
+
+body {
+	font-family: "Rubik", sans-serif;
+	font-size: 18px;
+	font-weight: $fw-semi-bold;
+	color: $very-dark-blue;
+}
+
+p {
+	font-weight: $fw-regular;
+	color: $grayish-blue;
+	line-height: 1.6;
+}
+
+section {
+	margin-bottom: 148px;
+}
+
+a {
+	font-weight: $fw-regular;
+	letter-spacing: 2px;
+}
+
+.container {
+	max-width: 1200px;
+	width: 86%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.info-content {
+	text-align: center;
+
+	.description {
+		margin-top: 20px;
+		margin-bottom: 28px;
+	}
+}
+
+[class*="btn"] {
+	border-radius: $border-radius-s;
+	padding: 12px 20px;
+	font-size: 15px;
+}
+
+.btn-primary {
+	background-color: $soft-blue;
+	color: $white-800;
+}
+.btn-extra {
+	background-color: $off-white;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.btn-secondary {
+	padding: 12px 28px;
+	background-color: $soft-red;
+	color: $white-800;
+}
+
+@media (min-width: 375px) {
+	.description {
+		font-size: 16px;
+	}
+}

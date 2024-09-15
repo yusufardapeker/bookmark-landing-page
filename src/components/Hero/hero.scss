@@ -1,0 +1,63 @@
+@import "../../styles/main.scss";
+
+#hero {
+	position: relative;
+	z-index: -2;
+
+	:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 10%;
+		background-color: $soft-blue;
+		right: -8.2%;
+		width: 250px;
+		height: 180px;
+		border-radius: 0px 0px 0px 56px;
+	}
+
+	.hero-image {
+		margin-bottom: 40px;
+	}
+
+	.btn-primary {
+		margin-right: 4px;
+	}
+}
+
+@media (min-width: 376px) {
+	#hero {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+
+		.content {
+			width: 44ch;
+		}
+
+		.title {
+			font-size: 44px;
+		}
+
+		.btn-primary {
+			margin-right: 32px;
+		}
+
+		img {
+			margin-right: -96px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 20%;
+			right: -10%;
+			background-color: $soft-blue;
+			width: 490px;
+			height: 360px;
+			border-radius: 0px 0px 0px 124px;
+		}
+	}
+}

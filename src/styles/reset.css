@@ -35,4 +35,5 @@ button {
 	background-color: transparent;
 	color: inherit;
 	font: inherit;
+	text-transform: inherit;
 }
