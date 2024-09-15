@@ -1,0 +1,71 @@
+@import "../../styles/main.scss";
+
+#faq {
+	display: flex;
+	flex-direction: column;
+
+	button {
+		align-self: center;
+		margin-top: 40px;
+	}
+
+	.faq-items {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		margin-top: 48px;
+
+		.faq {
+			border-bottom: 1px solid $grayish-blue;
+			padding-bottom: 12px;
+
+			.question {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 12px;
+
+				&-text {
+					font-weight: $fw-regular;
+				}
+			}
+
+			.answer {
+				display: none;
+			}
+
+			.arrow-icon {
+				transition: transform 200ms;
+				cursor: pointer;
+			}
+
+			&.show .answer {
+				display: block;
+			}
+
+			&.show .arrow-icon path {
+				stroke: red;
+			}
+
+			&.show .arrow-icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+@media (min-width: 376px) {
+	#faq {
+		.description {
+			width: 44ch;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.faq-items {
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
