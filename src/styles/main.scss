@@ -75,8 +75,14 @@ a {
 	color: $white-800;
 }
 
-@media (min-width: 375px) {
-	.description {
+@media (min-width: 376px) {
+	.info-content {
+		.title {
+			font-size: 36px;
+		}
+	}
+
+	[class*="btn"] {
 		font-size: 16px;
 	}
 }
