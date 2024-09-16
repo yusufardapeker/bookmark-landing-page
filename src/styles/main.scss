@@ -36,6 +36,11 @@ section {
 a {
 	font-weight: $fw-regular;
 	letter-spacing: 2px;
+	transition: color 200ms;
+
+	&:hover {
+		color: $soft-red;
+	}
 }
 
 .container {
@@ -64,16 +69,29 @@ a {
 .btn-primary {
 	background-color: $soft-blue;
 	color: $white-800;
-}
-.btn-extra {
-	background-color: $off-white;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+	&:hover {
+		border: 3px solid $soft-blue;
+		background-color: $white;
+		color: $soft-blue;
+	}
 }
 
 .btn-secondary {
 	padding: 12px 28px;
 	background-color: $soft-red;
 	color: $white-800;
+
+	&:hover {
+		border: 3px solid $soft-red;
+		background-color: $white;
+		color: $soft-red;
+	}
+}
+
+.btn-extra {
+	background-color: $off-white;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 @media (min-width: 376px) {

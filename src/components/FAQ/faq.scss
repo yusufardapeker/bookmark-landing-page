@@ -18,6 +18,7 @@
 		.faq {
 			border-bottom: 1px solid $grayish-blue;
 			padding-bottom: 12px;
+			cursor: pointer;
 
 			.question {
 				display: flex;
@@ -27,6 +28,11 @@
 
 				&-text {
 					font-weight: $fw-regular;
+					transition: color 200ms;
+
+					&:hover {
+						color: $soft-red;
+					}
 				}
 			}
 

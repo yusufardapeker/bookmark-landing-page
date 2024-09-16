@@ -11,6 +11,8 @@
 			padding: 18px 0;
 			position: relative;
 			color: $grayish-blue;
+			cursor: pointer;
+			transition: color 200ms;
 
 			&:nth-child(1) {
 				border-top: 1px solid $grayish-blue;
@@ -18,6 +20,10 @@
 
 			&.active {
 				color: $very-dark-blue;
+			}
+
+			&:hover {
+				color: $soft-red;
 			}
 
 			&.active::before {

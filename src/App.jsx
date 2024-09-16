@@ -6,16 +6,20 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Downloads from "./components/Downloads";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
-		<div className="container">
-			<Header />
-			<Hero />
-			<Features />
-			<Downloads />
-			<FAQ />
-		</div>
+		<>
+			<div className="container">
+				<Header />
+				<Hero />
+				<Features />
+				<Downloads />
+				<FAQ />
+			</div>
+			<Footer />
+		</>
 	);
 }
 
