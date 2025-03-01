@@ -2,7 +2,7 @@ import React from "react";
 
 function Logo() {
 	return (
-		<a href="#">
+		<a href="#" className="logo-wrapper">
 			<svg className="logo" width="148" height="25" xmlns="http://www.w3.org/2000/svg">
 				<g fill="none" fillRule="evenodd">
 					<path

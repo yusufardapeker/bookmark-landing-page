@@ -13,7 +13,7 @@ function index() {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 
 	return (
-		<header className={showMobileMenu && "show-mobile-menu"}>
+		<header className={showMobileMenu ? "show-mobile-menu" : ""}>
 			<Logo />
 			<DesktopNav />
 
