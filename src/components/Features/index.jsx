@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./features.scss";
 
@@ -9,14 +9,14 @@ function index() {
 	const [links, setLinks] = useState([]);
 	const [activeLink, setActiveLink] = useState();
 
+	const linksRef = useRef([]);
+
 	useEffect(() => {
-		const linkElements = document.querySelectorAll(".tab-link");
-		setLinks(linkElements);
+		setLinks(linksRef.current);
+		setActiveLink(linksRef.current[0]);
 	}, []);
 
-	if (links.length > 0 && !activeLink) {
-		links[0].classList.add("active");
-	}
+	activeLink?.classList.add("active");
 
 	const handleFeaturesTabs = (e) => {
 		links.forEach((link) => {
@@ -25,8 +25,7 @@ function index() {
 
 		e.target.classList.add("active");
 
-		const activeLinkElement = document.querySelector(".tab-link.active");
-		setActiveLink(activeLinkElement);
+		setActiveLink(e.target);
 	};
 
 	return (
@@ -40,7 +39,12 @@ function index() {
 
 			<ul className="links-wrapper">
 				{tabs.map((tab, index) => (
-					<li className="tab-link" key={index} onClick={(e) => handleFeaturesTabs(e)}>
+					<li
+						className="tab-link"
+						key={index}
+						onClick={(e) => handleFeaturesTabs(e)}
+						ref={(el) => (linksRef.current[index] = el)}
+					>
 						{tab.text}
 					</li>
 				))}
@@ -50,7 +54,6 @@ function index() {
 				{tabs.map((tab, index) => {
 					return (
 						<div className="tab" key={index}>
-							{index === 0 ? !activeLink && tab.component : ""}
 							{activeLink?.textContent === tab.text && tab.component}
 						</div>
 					);
