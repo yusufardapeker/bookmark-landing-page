@@ -59,9 +59,18 @@
 			flex-direction: row;
 			justify-content: center;
 			gap: 40px;
+			align-items: flex-start;
 
 			.card {
 				margin: unset;
+
+				&:nth-child(2) {
+					margin-top: 48px;
+				}
+
+				&:nth-child(3) {
+					margin-top: 96px;
+				}
 
 				.dots {
 					top: 72%;
