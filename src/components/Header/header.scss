@@ -15,6 +15,14 @@ header {
 		display: block;
 	}
 
+	.close-icon {
+		z-index: 2;
+	}
+
+	.logo {
+		z-index: 2;
+	}
+
 	&.show-mobile-menu .logo path:first-child {
 		fill: $white;
 	}

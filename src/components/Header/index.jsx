@@ -13,18 +13,19 @@ function index() {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 
 	return (
-		<header className={showMobileMenu ? "show-mobile-menu" : ""}>
+		<header className={showMobileMenu && "show-mobile-menu"}>
 			<Logo />
 			<DesktopNav />
 
-			{!showMobileMenu && (
+			{showMobileMenu ? (
+				<img src={closeIcon} className="close-icon" onClick={() => setShowMobileMenu(false)} />
+			) : (
 				<img
-					className="hamburger-icon"
 					src={hamburgerIcon}
+					className="hamburger-icon"
 					onClick={() => setShowMobileMenu(true)}
 				/>
 			)}
-			{showMobileMenu && <img src={closeIcon} onClick={() => setShowMobileMenu(false)} />}
 
 			{showMobileMenu && <MobileNav />}
 		</header>
