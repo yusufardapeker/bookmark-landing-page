@@ -18,7 +18,7 @@ function EasySharing() {
 						"Share your bookmarks Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."
 					}
 				/>
-				<Button text={"More Info"} className={"btn-primary"} />
+				<Button>More Info</Button>
 			</div>
 		</div>
 	);

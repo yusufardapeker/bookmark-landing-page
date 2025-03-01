@@ -17,7 +17,7 @@ function SimpleBookmarking() {
 						"Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites."
 					}
 				/>
-				<Button text={"More Info"} className={"btn-primary"} />
+				<Button>More Info</Button>
 			</div>
 		</div>
 	);

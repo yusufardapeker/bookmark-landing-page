@@ -18,7 +18,7 @@ function SpeedySearching() {
 						"Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks."
 					}
 				/>
-				<Button text={"More Info"} className={"btn-primary"} />
+				<Button>More Info</Button>
 			</div>
 		</div>
 	);

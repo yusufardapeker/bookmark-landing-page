@@ -27,7 +27,7 @@ function Downloads() {
 						<span className="min-version">{`Minimum Version ${card.minVersion}`}</span>
 						<img className="dots" src={dots} />
 
-						<Button text={"Add & Download Extension"} className={"btn-primary"} />
+						<Button>Add & Download Extension</Button>
 					</div>
 				))}
 			</div>

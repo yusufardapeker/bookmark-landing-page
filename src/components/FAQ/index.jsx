@@ -37,7 +37,7 @@ function FAQ() {
 				))}
 			</div>
 
-			<Button text={"More Info"} className={"btn-primary"} />
+			<Button>More Info</Button>
 		</section>
 	);
 }

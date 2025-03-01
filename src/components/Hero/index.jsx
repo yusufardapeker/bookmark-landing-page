@@ -20,8 +20,8 @@ function index() {
 					}
 				/>
 
-				<Button className={"btn-primary"} text={"Get it on Chrome"} />
-				<Button className={"btn-extra"} text={"Get it on Firefox"} />
+				<Button>Get it on Chrome</Button>
+				<Button className={"btn-extra"}>Get it on Firefox</Button>
 			</div>
 		</section>
 	);

@@ -15,7 +15,7 @@ function DesktopNav() {
 				<li className="link">
 					<a href="#">Contact</a>
 				</li>
-				<Button className={"btn-secondary"} text={"Login"} />
+				<Button className={"btn-secondary"}>Login</Button>
 			</ul>
 		</nav>
 	);

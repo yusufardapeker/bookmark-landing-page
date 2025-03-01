@@ -12,7 +12,7 @@ function SendEmail() {
 				</div>
 				<div className="input-wrapper">
 					<input className="email-input" type="email" placeholder="Enter your email address" />
-					<Button text={"Contact us"} className={"btn-secondary"} />
+					<Button className={"btn-secondary"}>Contact us</Button>
 				</div>
 			</div>
 		</div>
