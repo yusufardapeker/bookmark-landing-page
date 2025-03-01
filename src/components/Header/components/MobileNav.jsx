@@ -12,7 +12,7 @@ function MobileNav() {
 				<li className="link">Features</li>
 				<li className="link">Pricing</li>
 				<li className="link">Contact</li>
-				<Button className={"btn-mobile-nav"} text={"Login"} />
+				<Button className={"btn-mobile-nav"}>Login</Button>
 			</ul>
 
 			<div className="social-media-icons">

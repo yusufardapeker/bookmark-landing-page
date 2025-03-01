@@ -2,15 +2,14 @@
 
 #hero {
 	position: relative;
-	z-index: -2;
 
 	&::before {
 		content: "";
 		position: absolute;
 		z-index: -1;
 		top: 10%;
-		background-color: $soft-blue;
 		right: -8.2%;
+		background-color: $soft-blue;
 		width: 250px;
 		height: 180px;
 		border-radius: 0px 0px 0px 56px;
