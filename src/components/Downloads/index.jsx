@@ -1,6 +1,4 @@
-import React from "react";
-
-import "./downloads.scss";
+import "./downloads.css";
 
 import InformationContent from "../shared/InfoContent";
 import Button from "../shared/Button";
@@ -22,10 +20,10 @@ function Downloads() {
 			<div className="cards">
 				{cardsContent.map((card, index) => (
 					<div className="card" key={index}>
-						<img className="browser-image" src={card.browserImg} />
-						<h3 className="browser-name">{`Add to ${card.browserName}`}</h3>
-						<span className="min-version">{`Minimum Version ${card.minVersion}`}</span>
-						<img className="dots" src={dots} />
+						<img className="browser-image" src={card.browserImg} alt="" />
+						<p className="browser-name">{`Add to ${card.browserName}`}</p>
+						<p className="min-version">{`Minimum Version ${card.minVersion}`}</p>
+						<img className="dots" src={dots} alt="" />
 
 						<Button>Add & Download Extension</Button>
 					</div>

@@ -1,0 +1,144 @@
+footer {
+	.send-email {
+		background-color: var(--soft-blue);
+		color: var(--white);
+		text-align: center;
+		padding: 5.6rem 0;
+		font-weight: var(--fw-bold);
+
+		.joined-amount {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+		}
+
+		.text {
+			font-size: clamp(2.4rem, 1.4rem + 1.4vw, 3.2rem);
+			margin-top: clamp(1.6rem, 1.2rem + 1.2vw, 3.2rem);
+			margin-bottom: 4rem;
+		}
+
+		.email-form {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+
+			.email-input {
+				font-size: 1.5rem;
+				border-radius: 4px;
+				padding: 1.2rem 1.6rem;
+				background-color: var(--white);
+				color: var(--very-dark-blue);
+				font-weight: var(--fw-regular);
+			}
+
+			.btn-secondary:focus-visible,
+			.email-input:focus {
+				outline: 3px dashed var(--white);
+				outline-offset: 3px;
+			}
+		}
+	}
+
+	.footer-links-wrapper {
+		background-color: var(--very-dark-blue);
+		padding: 4rem 0;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.logo-wrapper {
+				&:focus-visible {
+					outline: 2px solid var(--white);
+					outline-offset: 0.6rem;
+					border-radius: 4px;
+				}
+
+				.logo path:first-child {
+					fill: var(--white);
+				}
+			}
+
+			.site-links {
+				display: flex;
+				flex-direction: column;
+				color: var(--white-800);
+				font-weight: var(--fw-regular);
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-size: 1.5rem;
+				gap: 2rem;
+				margin: 4rem 0;
+				text-align: center;
+
+				.site-link:focus-visible {
+					outline: 2px solid var(--white);
+					border-radius: 4px;
+					outline-offset: 3px;
+				}
+			}
+
+			.social-media-icons {
+				display: flex;
+				gap: 3.2rem;
+
+				.social-media-icon-wrapper {
+					&:hover .social-media-icon path {
+						fill: var(--soft-red);
+					}
+
+					&:focus-visible {
+						outline: 2px solid var(--soft-red);
+						border-radius: 4px;
+						outline-offset: 6px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (width > 376px) {
+	footer {
+		.send-email {
+			.email-form {
+				flex-direction: row;
+				justify-content: center;
+
+				.email-input {
+					flex-basis: 28rem;
+				}
+			}
+
+			.joined-amount {
+				font-size: 1.4rem;
+			}
+
+			.text {
+				max-width: 22ch;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		.footer-links-wrapper {
+			.container {
+				flex-direction: row;
+
+				.site-links {
+					flex-direction: row;
+
+					margin: 0 0 0 6.4rem;
+					gap: 3.2rem;
+				}
+
+				.social-media-icons {
+					margin-left: auto;
+					gap: 4.8rem;
+				}
+			}
+		}
+	}
+}

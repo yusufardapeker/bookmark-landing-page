@@ -1,0 +1,106 @@
+:root {
+	--soft-blue: hsl(231, 69%, 60%);
+	--soft-red: hsl(0, 94%, 66%);
+	--grayish-blue: hsl(229, 8%, 60%);
+	--very-dark-blue: hsl(229, 31%, 21%);
+	--very-dark-blue-900: hsla(229, 31%, 21%, 0.96);
+	--white: hsl(0, 0%, 100%);
+	--white-800: hsla(0, 0%, 100%, 0.8);
+	--white-200: hsla(0, 0%, 100%, 0.2);
+	--off-white: rgb(246, 241, 241);
+
+	--fw-regular: 400;
+	--fw-semi-bold: 500;
+	--fw-bold: 600;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	font-size: 1.8rem;
+	font-weight: var(--fw-regular);
+	color: var(--very-dark-blue);
+	background-color: var(--white);
+}
+
+section {
+	margin-bottom: 14.8rem;
+}
+
+a {
+	font-weight: var(--fw-regular);
+	letter-spacing: 2px;
+	transition: color 200ms;
+
+	&:hover {
+		color: var(--soft-red);
+	}
+}
+
+.container {
+	width: min(115rem, 86%);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title {
+	font-size: clamp(2.7rem, 1.5rem + 1.5vw, 3.6rem);
+	font-weight: var(--fw-bold);
+}
+
+.description {
+	color: var(--grayish-blue);
+	line-height: 1.6;
+	margin-top: 2rem;
+	margin-bottom: 3.2rem;
+	font-size: 1.6rem;
+}
+
+[class^="btn"] {
+	border-radius: 4px;
+	padding: 1.6rem 1.8rem;
+	font-size: 1.5rem;
+	font-weight: var(--fw-semi-bold);
+
+	&:focus-visible {
+		outline: 3px dashed var(--soft-red);
+		outline-offset: 3px;
+	}
+}
+
+.btn-primary {
+	background-color: var(--soft-blue);
+	color: var(--white);
+
+	&:hover {
+		outline: 3px solid var(--soft-blue);
+		background-color: var(--white);
+		color: var(--soft-blue);
+	}
+}
+
+.btn-secondary {
+	padding: 1.2rem 2.8rem;
+	background-color: var(--soft-red);
+	color: var(--white);
+
+	&:hover {
+		outline: 3px solid var(--soft-red);
+		background-color: var(--white);
+		color: var(--soft-red);
+	}
+}
+
+.btn-extra {
+	background-color: var(--off-white);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@media (width > 376px) {
+	.description {
+		font-size: 1.8rem;
+	}
+}

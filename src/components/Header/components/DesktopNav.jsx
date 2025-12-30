@@ -1,22 +1,12 @@
-import React from "react";
-
 import Button from "../../shared/Button";
+import SiteLinks from "../../shared/SiteLinks";
 
 function DesktopNav() {
 	return (
 		<nav className="desktop-nav">
-			<ul className="links">
-				<li className="link">
-					<a href="#">Features</a>
-				</li>
-				<li className="link">
-					<a href="#">Pricing</a>
-				</li>
-				<li className="link">
-					<a href="#">Contact</a>
-				</li>
-				<Button className={"btn-secondary"}>Login</Button>
-			</ul>
+			<SiteLinks />
+
+			<Button className={"btn-secondary"}>Login</Button>
 		</nav>
 	);
 }

@@ -1,31 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import "./features.scss";
+import "./features.css";
 
 import InformationContent from "../shared/InfoContent";
 import { tabs } from "./constants";
 
 function index() {
-	const [links, setLinks] = useState([]);
-	const [activeLink, setActiveLink] = useState();
-
-	const linksRef = useRef([]);
+	const tabButtonElements = useRef([]);
+	const [activeButton, setActiveButton] = useState();
 
 	useEffect(() => {
-		setLinks(linksRef.current);
-		setActiveLink(linksRef.current[0]);
+		setActiveButton(tabButtonElements.current[0]);
 	}, []);
 
-	activeLink?.classList.add("active");
+	activeButton?.classList.add("active");
 
-	const handleFeaturesTabs = (e) => {
-		links.forEach((link) => {
-			link.classList.remove("active");
-		});
+	const handleTabs = (e) => {
+		setActiveButton(e.target);
 
+		tabButtonElements.current.forEach((link) => link.classList.remove("active"));
 		e.target.classList.add("active");
-
-		setActiveLink(e.target);
 	};
 
 	return (
@@ -37,27 +31,26 @@ function index() {
 				}
 			/>
 
-			<ul className="links-wrapper">
+			<ul className="tab-buttons">
 				{tabs.map((tab, index) => (
-					<li
-						className="tab-link"
-						key={index}
-						onClick={(e) => handleFeaturesTabs(e)}
-						ref={(el) => (linksRef.current[index] = el)}
-					>
-						{tab.text}
+					<li key={index} className="tab-button-wrapper">
+						<button
+							className="tab-button"
+							onClick={(e) => handleTabs(e)}
+							ref={(el) => (tabButtonElements.current[index] = el)}
+						>
+							{tab.text}
+						</button>
 					</li>
 				))}
 			</ul>
 
-			<div className="tabs">
-				{tabs.map((tab, index) => {
-					return (
-						<div className="tab" key={index}>
-							{activeLink?.textContent === tab.text && tab.component}
-						</div>
-					);
-				})}
+			<div className="tab-contents">
+				{tabs.map((tab, index) => (
+					<div className="tab-content" key={index}>
+						{activeButton?.textContent === tab.text && tab.component}
+					</div>
+				))}
 			</div>
 		</section>
 	);

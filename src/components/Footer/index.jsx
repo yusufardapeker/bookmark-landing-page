@@ -1,15 +1,13 @@
-import React from "react";
-
-import "./footer.scss";
+import "./footer.css";
 
 import SendEmail from "./components/SendEmail";
-import SiteLinks from "./components/SiteLinks";
+import FooterLinks from "./components/FooterLinks";
 
 function index() {
 	return (
 		<footer>
 			<SendEmail />
-			<SiteLinks />
+			<FooterLinks />
 		</footer>
 	);
 }

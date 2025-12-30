@@ -1,4 +1,3 @@
-import React from "react";
 import tabImage from "../../../images/illustration-features-tab-1.svg";
 import InformationContent from "../../shared/InfoContent";
 import Button from "../../shared/Button";
@@ -7,7 +6,7 @@ function SimpleBookmarking() {
 	return (
 		<div className="tab">
 			<div className="img-wrapper">
-				<img src={tabImage} />
+				<img src={tabImage} alt="" />
 			</div>
 
 			<div className="content">

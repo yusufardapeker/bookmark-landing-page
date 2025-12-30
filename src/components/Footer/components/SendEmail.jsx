@@ -1,5 +1,3 @@
-import React from "react";
-
 import Button from "../../shared/Button";
 
 function SendEmail() {
@@ -7,13 +5,13 @@ function SendEmail() {
 		<div className="send-email">
 			<div className="container">
 				<div className="content">
-					<span className="joined-amount">35,000+ already joined</span>
-					<h3 className="text">Stay up-to-date with what we're doing</h3>
+					<p className="joined-amount">35,000+ already joined</p>
+					<p className="text">Stay up-to-date with what we're doing</p>
 				</div>
-				<div className="input-wrapper">
+				<form className="email-form">
 					<input className="email-input" type="email" placeholder="Enter your email address" />
-					<Button className={"btn-secondary"}>Contact us</Button>
-				</div>
+					<Button className={"btn-secondary"}>Contact Us</Button>
+				</form>
 			</div>
 		</div>
 	);

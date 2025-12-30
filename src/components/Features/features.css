@@ -1,0 +1,149 @@
+#features {
+	text-align: center;
+
+	.tab-buttons {
+		margin-top: 40px;
+
+		.tab-button-wrapper {
+			&:first-child {
+				border-top: 1px solid var(--grayish-blue);
+			}
+
+			.tab-button {
+				display: block;
+				min-width: 100%;
+				border-bottom: 1px solid var(--grayish-blue);
+				padding: 18px 0;
+				position: relative;
+				color: var(--grayish-blue);
+				cursor: pointer;
+				transition: color 200ms;
+
+				&.active {
+					color: var(--very-dark-blue);
+				}
+
+				&:hover {
+					color: var(--soft-red);
+				}
+
+				&:focus-visible {
+					outline: 3px dashed var(--soft-red);
+					border-radius: 4px;
+					color: var(--soft-red);
+				}
+
+				&.active::before {
+					content: "";
+					position: absolute;
+					left: 50%;
+					bottom: 0;
+					transform: translateX(-50%);
+					width: 50%;
+					height: 4px;
+					background-color: var(--soft-red);
+				}
+			}
+		}
+	}
+
+	.tab-contents {
+		margin-top: 80px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: var(--soft-blue);
+			width: 312px;
+			height: 200px;
+			z-index: -1;
+			top: 8%;
+			left: -10%;
+			border-radius: 0px 0px 124px 0px;
+		}
+
+		img {
+			margin-bottom: 76px;
+		}
+	}
+}
+
+@media (width > 376px) {
+	#features {
+		.description {
+			width: 44ch;
+			display: inline-block;
+		}
+
+		.tab-buttons {
+			display: flex;
+			justify-content: center;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			gap: 64px;
+			border-bottom: 1px solid var(--grayish-blue);
+
+			.tab-button-wrapper {
+				&:first-child {
+					border-top: unset;
+				}
+
+				.tab-button {
+					border-bottom: unset;
+					padding: 0px 0px 24px 0;
+
+					&.active::before {
+						width: 120%;
+					}
+				}
+			}
+		}
+
+		.tab-contents {
+			.tab-content {
+				.tab {
+					display: flex;
+					align-items: center;
+					gap: 96px;
+
+					.img-wrapper {
+						width: 540px;
+						height: 400px;
+					}
+
+					.content {
+						width: 44ch;
+
+						display: flex;
+						flex-direction: column;
+
+						.info-content {
+							text-align: left;
+						}
+
+						.btn-primary {
+							align-self: flex-start;
+						}
+					}
+				}
+			}
+
+			&::before {
+				width: 560px;
+				height: 340px;
+				z-index: -1;
+				/* top: 18%; */
+				/* left: -10%; */
+				top: 90px;
+				left: -175px;
+				border-radius: 0px 124px 124px 0px;
+			}
+
+			img {
+				margin-bottom: unset;
+			}
+		}
+	}
+}

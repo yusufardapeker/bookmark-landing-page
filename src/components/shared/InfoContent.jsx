@@ -1,5 +1,3 @@
-import React from "react";
-
 function InfoContent({ title, description }) {
 	return (
 		<div className="info-content">

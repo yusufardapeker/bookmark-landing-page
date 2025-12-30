@@ -1,0 +1,131 @@
+header {
+	background-color: var(--white);
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 3.2rem;
+		min-height: 9.6rem;
+	}
+
+	.desktop-nav {
+		display: none;
+	}
+
+	.close-mobile-menu-button {
+		z-index: 2;
+	}
+
+	.hamburger-menu-button:focus-visible,
+	.logo-wrapper:focus-visible {
+		outline: 2px solid var(--soft-blue);
+		outline-offset: 0.6rem;
+		border-radius: 4px;
+	}
+
+	.logo-wrapper {
+		z-index: 2;
+	}
+
+	&.show-mobile-menu .logo path:first-child,
+	&.show-mobile-menu .logo circle {
+		fill: var(--white);
+	}
+
+	&.show-mobile-menu .logo path:last-child {
+		fill: var(--very-dark-blue);
+	}
+
+	.mobile-nav {
+		position: absolute;
+		inset: 0;
+		background-color: var(--very-dark-blue-900);
+		z-index: 1;
+		font-weight: var(--fw-regular);
+		text-transform: uppercase;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100vh;
+		padding-top: 10.4rem;
+		padding-bottom: 6rem;
+		color: var(--white-800);
+
+		.site-links {
+			min-width: 86%;
+			text-align: center;
+			letter-spacing: 2px;
+			font-size: 2rem;
+
+			.site-link-wrapper {
+				padding: 1.8rem 0;
+				border-top: 1px solid var(--white-200);
+
+				&:nth-child(3) {
+					border-bottom: 1px solid var(--white-200);
+					margin-bottom: 2.8rem;
+				}
+
+				.site-link:focus-visible {
+					outline: 2px solid var(--soft-red);
+					border-radius: 4px;
+					outline-offset: 3px;
+				}
+			}
+		}
+
+		.btn-mobile-nav {
+			text-transform: uppercase;
+			min-width: 100%;
+			border: 2px solid var(--white);
+			letter-spacing: 2px;
+			font-weight: var(--fw-semi-bold);
+			font-size: 1.8rem;
+		}
+
+		.social-media-icons {
+			display: flex;
+			gap: 4rem;
+			margin-top: auto;
+		}
+	}
+}
+
+@media (width > 376px) {
+	header {
+		.container {
+			height: 12.4rem;
+			margin-bottom: 3.6rem;
+		}
+
+		.hamburger-menu-button,
+		.close-mobile-menu-button,
+		.mobile-nav {
+			display: none;
+		}
+
+		&.show-mobile-menu .logo path:first-child {
+			fill: #242a45;
+		}
+		&.show-mobile-menu .logo circle {
+			fill: #5267df;
+		}
+
+		&.show-mobile-menu .logo path:last-child {
+			fill: #fff;
+		}
+
+		.desktop-nav {
+			display: flex;
+			gap: 4rem;
+
+			.site-links {
+				display: flex;
+				align-items: center;
+				gap: 4rem;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

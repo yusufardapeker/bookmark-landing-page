@@ -1,5 +1,3 @@
-import React from "react";
-
 import InformationContent from "../../shared/InfoContent";
 import tabImage from "../../../images/illustration-features-tab-2.svg";
 import Button from "../../shared/Button";
@@ -8,7 +6,7 @@ function SpeedySearching() {
 	return (
 		<div className="tab">
 			<div className="img-wrapper">
-				<img src={tabImage} />
+				<img src={tabImage} alt="" />
 			</div>
 
 			<div className="content">
